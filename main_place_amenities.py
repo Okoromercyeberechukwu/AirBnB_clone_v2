@@ -12,7 +12,7 @@ city = City(state_id=state.id, name="San Francisco")
 city.save()
 
 # creation of a User
-user = User(email="john@snow.com", password="johnpwd")
+user = User(name="hello", email="john@snow.com", password="johnpwd")
 user.save()
 
 # creation of 2 Places
@@ -32,13 +32,12 @@ amenity_3.save()
 # link place_1 with 2 amenities
 place_1.amenities.append(amenity_1)
 place_1.amenities.append(amenity_2)
+print("----->", place_1.__dict__)
 
 # link place_2 with 3 amenities
 place_2.amenities.append(amenity_1)
 place_2.amenities.append(amenity_2)
 place_2.amenities.append(amenity_3)
-
 storage.save()
 
 print("OK")
-
